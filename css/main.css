@@ -6,7 +6,9 @@ html {
 body {
   color: purple;
   /* distribute font to entire site */
-  font-family: 'Merriweather', serif;
+  font-family: ff-providence-sans-web-pro, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   background-color: var(--white);
 }
 
