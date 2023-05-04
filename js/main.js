@@ -9,12 +9,10 @@ function myFunction() {
     }
   }
 
-var Icon = document.querySelector(".icon");
-var Icon1 = document.querySelector(".span:nth-child(1)");
-var Icon2 = document.querySelector(".span:nth-child(2)");
-var Icon3 = document.querySelector(".span:nth-child(3)");
-
-
+  var Icon = $(".icon");
+  var Icon1 = Icon.find("span:nth-child(1)");
+  var Icon2 = Icon.find("span:nth-child(2)");
+  var Icon3 = Icon.find("span:nth-child(3)");
 
 Icon.click( function myFunction() {
   $(this).toggleClass("active");

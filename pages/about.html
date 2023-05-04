@@ -20,14 +20,45 @@
   <link rel="stylesheet" href="../css/main.css">
   
   <meta name="theme-color" content="#fafafa">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Syloti+Nagri&family=Roboto&display=swap" rel="stylesheet">
+ 
+  <!-- Fonts-->
+  
+  <!--Providence Sans-->
+  <link rel="stylesheet" href="https://use.typekit.net/xzx3vba.css">
+
+  <!--Harmond Uploaded Font-->
+  <link rel="preload" href="Harmond-SemiBoldCondensed.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="Harmond-SemBdItaCond.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!--JQueries-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
 </head>
 
 <body>
-  <h1>About</h1>
-  <a href="./index.html">Back to homepage</a>
+  <header class="header">
+    <img class="logo" src="img/giz2.jpg" alt="This is our company logo">
+    <nav class="main-nav">
+      <a href="./index.html">Home</a>
+      <a href="./work.html">Work</a>
+      <a class="fake-strike" href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <div class="mobile-nav-wrapper">
+      <a href="javascript:void(0);" class="icon" data= "hamburger-menu" onclick="myFunction()">
+      <span></span>
+      <span></span>
+      <span></span>
+      </a>
+      <nav id="myLinks" class="mobile-main-nav">
+        <a class= "mobile-fake-strike" href="./index.html">Home</a>
+        <a class="mobile-dot" href="./work.html">Work</a>
+        <a class="mobile-dot" href="./about.html">About</a>
+        <a class="mobile-dot" href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <script src="js/main.js"></script>
 </body>
 
