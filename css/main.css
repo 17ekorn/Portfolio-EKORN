@@ -81,6 +81,7 @@ h1 {
 
 .main-nav a{
   display: flex;
+  flex-direction:row;
   position: relative;
   text-decoration: none;
   color: black;
@@ -175,6 +176,8 @@ h1 {
   top: 51px;
   width: 100%;
   left: -37px;
+  font-family: 'Harmond', normal;
+  font-weight: 600;
 }
 
 .mobile-main-nav a{
