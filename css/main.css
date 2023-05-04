@@ -255,9 +255,18 @@ h1 {
   gap:30px;
 }
 
+.wrap-list{
+  padding:30px;
+  text-decoration:none;
+  display: flex;
+}
+
 .right{
   justify-content:right;
+}
 
+.left{
+  justify-content:left;
 }
 
 /*-------------------------*/
