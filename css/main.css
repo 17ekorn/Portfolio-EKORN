@@ -251,12 +251,18 @@ h1 {
 /*Works Landing Page Classes*/
 .wrap-list{
   display:flex;
-  min-width:800px;
-  gap:30px;
+  max-width:800px;
+  padding:30px;
 }
 
-.wrap-list{
-  padding:30px;
+.listpage{
+  display:grid;
+  grid-template-columns: repeat(4, 14vw);
+  grid-gap: 0.25rem;
+  list-style-type: none;
+}
+
+.wrap-list li{
   text-decoration:none;
   display: flex;
 }
@@ -265,9 +271,31 @@ h1 {
   justify-content:right;
 }
 
+.right h2::before{
+
+}
+
+.right h2::afer{}
+
 .left{
   justify-content:left;
 }
+
+.left h2 {
+  
+}
+
+.left h2::before{
+
+}
+
+.left h2::afer{}
+
+/*-------------------------*/
+
+/*Works Mobile Landing Page Classes*/
+
+
 
 /*-------------------------*/
 
@@ -311,6 +339,17 @@ h1 {
 }
 
 @media screen and (min-width: 1081px){
+  .wrap-list li:nth-child(1) {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
 
+  .right1 h2{
+    grid-column-start: 1;
+  }
+
+  .right img{
+    grid-column-start:2;
+  }
 }
 /*-------------------------*/
