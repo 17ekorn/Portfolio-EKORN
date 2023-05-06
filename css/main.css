@@ -47,11 +47,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Harmond', italic;
   font-style: italic;
-  font-weight: 700;
+  font-weight: normal;
   text-transform: uppercase;
-  text-shadow: 5px 4px 7px #00c200;
+  color: var(--black);
+}
+
+p{
+  font-family: 'Harmond', normal;
+  font-weight: 600;
+  color:var(--black);
 }
 
 h1 {
@@ -249,47 +255,80 @@ h1 {
 /*-------------------------*/
 
 /*Works Landing Page Classes*/
+.vericaltext{
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
+
+/*Grid Classes*/
 .wrap-list{
   display:flex;
-  max-width:800px;
   padding:30px;
 }
 
 .listpage{
-  display:grid;
-  grid-template-columns: repeat(4, 14vw);
-  grid-gap: 0.25rem;
   list-style-type: none;
+  width:100%;
 }
 
-.wrap-list li{
+.listpage li{
   text-decoration:none;
   display: flex;
+  gap:70px;
+}
+
+.listpage p{
+  max-width: 65ch;
+}
+
+.listpage p::before{
+  content: "";
+  display: block;
+  padding-bottom: 11px;
+  border-top: 1px solid var(--black);
 }
 
 .right{
   justify-content:right;
+  flex-direction: row-reverse;
 }
 
-.right h2::before{
 
+
+.right h2::after{
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--black);
+  position: absolute;
+  background-color: black;
+  margin-left: 13px;
+  margin-top: 7.3px;
 }
-
-.right h2::afer{}
 
 .left{
   justify-content:left;
 }
 
-.left h2 {
-  
+.working{
+  width:300px;
 }
 
 .left h2::before{
-
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--black);
+  position: absolute;
+  background-color: black;
+  margin-left: -16px;
+  margin-top: 6.3px;
 }
 
-.left h2::afer{}
+.left h2::after{}
 
 /*-------------------------*/
 
@@ -297,6 +336,28 @@ h1 {
 
 
 
+/*-------------------------*/
+
+/*Gallery Landing Page*/
+  .gal-pad{
+    padding:4px;
+  }
+  .gal-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .gal-column {
+    flex: 50%;
+    max-width: 34%;
+  }
+  
+  .gal-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
 /*-------------------------*/
 
 /*Nav Bar Media Queries*/
@@ -319,17 +380,19 @@ h1 {
 /*Page Content Media Queries*/
 
 /* Phone Media Queries */
-@media screen and (max-width: 299px) {
-
-}
-
-@media screen and (min-width: 300px) and (max-width: 479px) {
-
+@media screen and (max-width: 479px) {
+  .listpage li{
+    flex-direction:column;
+    gap:30px;
+  }
 }
 
 /* Tablet Media Queries */
 @media screen and (min-width: 480px) and (max-width: 769px) {
-
+  .listpage li{
+    flex-direction:column;
+    gap:30px;
+  }
 }
 
 
@@ -339,17 +402,6 @@ h1 {
 }
 
 @media screen and (min-width: 1081px){
-  .wrap-list li:nth-child(1) {
-    grid-row-start: 1;
-    grid-column-start: 2;
-  }
-
-  .right1 h2{
-    grid-column-start: 1;
-  }
-
-  .right img{
-    grid-column-start:2;
-  }
+  
 }
 /*-------------------------*/

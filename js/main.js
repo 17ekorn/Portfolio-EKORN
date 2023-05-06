@@ -31,14 +31,7 @@ Icon.click( function myFunction() {
 });
 
 
-list(function myFunction() {
-  var x = document.getElementById("myList");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "flex";
-  }
-});
+
 
 
 
