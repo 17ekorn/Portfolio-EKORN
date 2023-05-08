@@ -96,8 +96,10 @@ h1 {
 }
 
 .logo {
-  max-width: 100px;
-  z-index:10;
+  max-width: 172px;
+  z-index: 10;
+  margin-top: -13px;
+  margin-left: -19px;
 }
 
 .main-nav {
@@ -114,7 +116,8 @@ h1 {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--black);
   height: 1.2px;
-  width: 98%;
+  right: 2px;
+  width: 97%;
 }
 
 .main-nav a{
@@ -175,8 +178,8 @@ h1 {
 /*Menu Icon Classes*/
 .icon{
   position: absolute;
-  top: 270px;
-  left: 482px;
+  top: 265px;
+  left: 515px;
   margin-left: 209px;
   margin-top: -251px;
   width: 23px;
@@ -510,8 +513,8 @@ textarea:hover{
   .abouttext{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 140px;
+    justify-content: space-around;
+    gap: 108px;
   }
 
   .aboutverticaltext{
@@ -563,6 +566,12 @@ textarea:hover{
     display: flex;
     flex-wrap: wrap;
     padding: 0 8px;
+    justify-content: space-evenly;
+  }
+
+  .gal-pad h1{
+    position:relative;
+    left:100px;
   }
   
   .gal-column {
@@ -590,7 +599,8 @@ textarea:hover{
   }
   
   .header::after{
-    width: 711px;
+    width: 709px;
+    left: 49px;
   }
 }
 
@@ -624,7 +634,7 @@ textarea:hover{
   width: 22px;
   height: 1178px;
   left: 52px;
-  top: -521px;
+  top: -555px;
   stroke-width: 9px;
 }
 
@@ -664,15 +674,32 @@ textarea:hover{
   stroke-width: 9px;
 }
 
+.line-class8{
+  position: absolute;
+  width: 58px;
+  height: 307px;
+  left: 64px;
+  top: -78px;
+  stroke-width: 4px;
 
+}
+
+.line-class9{
+  position: absolute;
+  height: 1355px;
+  top: 360px;
+  width: 838px;
+  stroke-width: 0.1px;
+  left: 111px;
+}
 /*-------------------------*/
 /*Page Content Media Queries*/
 
 /* Phone Media Queries */
 @media screen and (max-width: 479px) {
   .icon{
-    top: 270px;
-    left: 266px;
+    top: 266px;
+    left: 305px;
   }
 
   .contactpage{
@@ -686,7 +713,9 @@ textarea:hover{
     gap:30px;
   }
   .wrap-content{
+    flex-direction: column;
     margin-top:-100px;
+    position:absolute;
   }
 
   .header::after{
@@ -724,6 +753,23 @@ textarea:hover{
   .line-class{
     display:none;
   }
+  .gal-pad{
+    position:absolute;
+  }
+
+  .gal-column{
+    flex:100%;
+    max-width:100%;
+  }
+  .line-class9{
+    display:hidden;
+  }
+
+  .formwrap{
+    right:0px;
+    padding-right:0px;
+    left: 10%;
+  }
 }
 
 /* Tablet Media Queries */
@@ -750,19 +796,31 @@ textarea:hover{
   form{
     width:100%;
   }
+  .gal-pad{
+    position:absolute;
+  }
+
+  .gal-column{
+    flex:50%;
+    max-width:50%;
+  }
+  .line-class9{
+    display:hidden;
+  }
+  .formwrap{
+    right:0px;
+    padding-right:0px;
+    left: 10%;
+  }
 }
 
 
 /* Desktop Media Queries */
 @media screen and (min-width: 769px) and (max-width: 1080px) {
-  .line-class8{
-    display:none;
-  }
+  
 }
 
 @media screen and (min-width: 1081px){
-  .line-class8{
-    display:none;
-  }
+ 
 }
 /*-------------------------*/
