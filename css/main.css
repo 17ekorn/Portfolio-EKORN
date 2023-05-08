@@ -1,6 +1,7 @@
 /* Place CSS styles here */
 html {
   scroll-behavior: smooth;
+  overflow-x:hidden;
 }
 
 body {
@@ -10,6 +11,8 @@ body {
   font-style: normal;
   font-weight: 400;
   background-color: var(--white);
+  overflow-x:hidden;
+  overflow-y:hidden;
 }
 
 @font-face {
@@ -25,8 +28,26 @@ body {
   font-family: 'Harmond';
   src: url(../../Portfolio-EKORN/Harmond-SemBdItaCond.woff2) format('woff2'),
       url(../../Portfolio-EKORN/Harmond-SemBdItaCond.woff) format('woff');
-  font-weight: normal;
+  font-weight: 600;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harmond';
+  src: url(../../Portfolio-EKORN/Harmond-ExtBdItaExp.woff2) format('woff2'),
+      url(../../Portfolio-EKORN/Harmond-ExtBdItaExp.woff2) format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harmond';
+  src: url(../../Portfolio-EKORN/Harmond-ExtraBoldExpanded.woff2) format('woff2'),
+      url(../../Portfolio-EKORN/Harmond-ExtraBoldExpanded.woff2) format('woff');
+  font-weight: bold;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -48,8 +69,7 @@ h4,
 h5,
 h6 {
   font-family: 'Harmond', italic;
-  font-style: italic;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--black);
 }
@@ -58,6 +78,7 @@ p{
   font-family: 'Harmond', normal;
   font-weight: 600;
   color:var(--black);
+  max-width:65ch;
 }
 
 h1 {
@@ -68,21 +89,32 @@ h1 {
   margin-top: 2px;
   padding: 16px;
   display: flex;
-  flex-direction: column;
   gap: 40px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   font-size: 20px;
 }
 
 .logo {
   max-width: 100px;
+  z-index:10;
 }
 
 .main-nav {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  z-index:10;
+}
+
+.header::after{
+  content: "";
+  display: block;
+  position:absolute;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--black);
+  height: 1.2px;
+  width: 98%;
 }
 
 .main-nav a{
@@ -93,13 +125,14 @@ h1 {
   color: black;
   font-family: 'Harmond', normal;
   font-weight: 600;
+  font-style: italic;
+  font-size:20px;
 }
 
 .fake-strike{
   font-family: 'Harmond', normal;
-  font-style: italic;
-  font-weight: normal;
-  position:relative;
+  font-weight: 600;
+  transition: all .25s ease;
 }
 
 .main-nav a::before{
@@ -142,20 +175,22 @@ h1 {
 /*Menu Icon Classes*/
 .icon{
   position: absolute;
-  top: 45%;
-  left: 53%;
+  top: 270px;
+  left: 482px;
   margin-left: 209px;
   margin-top: -251px;
   width: 23px;
   height: 15.799999999999997px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .icon span {
+  z-index:10px;
   position: absolute;
   left: 0;
   width: 23px;
-  height: 0.7999999999999998px;
+  height: 0.7px;
   background-color: black;
 }
 .icon span:nth-child(1) {
@@ -255,13 +290,13 @@ h1 {
 /*-------------------------*/
 
 /*Works Landing Page Classes*/
-.vericaltext{
+.verticaltext{
   writing-mode: vertical-lr;
   text-orientation: upright;
   text-transform: uppercase;
 }
 
-/*Grid Classes*/
+/*List Classes*/
 .wrap-list{
   display:flex;
   padding:30px;
@@ -289,12 +324,17 @@ h1 {
   border-top: 1px solid var(--black);
 }
 
+.listpage p::after{
+  content: "";
+  display: block;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--black);
+}
+
 .right{
   justify-content:right;
   flex-direction: row-reverse;
 }
-
-
 
 .right h2::after{
   content: " ";
@@ -332,25 +372,203 @@ h1 {
 
 /*-------------------------*/
 
-/*Works Mobile Landing Page Classes*/
+/*Contact Classes*/
+.contactpage{
+  display:flex;
+  overflow-x:hidden;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 120px;
+}
+
+.contactpage h1{
+  font-size: 57px;
+  margin-top: 108px;
+}
+
+.groupcontact{
+  display:flex;
+  gap: 60px;
+}
+
+.groupcontact::after{
+  content:"";
+  height:100%;
+  position:absolute;
+  width:1px;
+}
+.contacttext{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 181px;
+  width:300px;
+}
+
+.contacttext span{
+  display:block;
+}
+
+.contacttext p{
+  max-width:65ch;
+}
+
+form{
+  display:inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+.formwrap{
+  padding-right: 70px;
+  position: relative;
+  right: 75px;
+}
+
+.formwrap span{
+  display:block;
+}
+
+label{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 3%;
+  display:block;
+  font-family:'Cormorant Garamond', serif;
+  color:var(--black);
+}
+
+input {
+  background-color: var(--offwhite);
+  color: var(--black);
+  border-radius: 1.5rem;
+  width: 17ch;
+  padding: 9px;
+  padding-left: 20px;
+  font-size: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+input:focus{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+input:hover{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+textarea{
+  background-color: var(--offwhite);
+  color: var(--black);
+  border-radius: 1.5rem;
+  min-width: 40ch;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+textarea:focus{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
 
 
+textarea:hover{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
 
 /*-------------------------*/
 
-/*Gallery Landing Page*/
+/*About Page Classes*/
+  .wrap-content{
+    display:flex;
+    width:97%;
+    gap: 170px;
+    padding: 20px;
+    margin-top: -75px;
+  }
+  .aboutimg{
+    width:300px;
+  }
+
+  .abouttext{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 140px;
+  }
+
+  .aboutverticaltext{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    position: relative;
+    top: 60px;
+  }
+
+  
+  .aboutcontact{
+    display:flex;
+    gap: 60px;
+  }
+
+  .abouttext span{
+    display: block;
+  }
+
+  .abouttext p{
+    max-width:65ch;
+  }
+  
+
+  .abouttext p::before {
+    content: "";
+    display: block;
+    padding-left: 11px;
+    border-left: 1px solid var(--black);
+  }
+
+  .abouttext p::before {
+    content: "";
+    display: block;
+    padding-right: 11px;
+    border-right: 1px solid var(--black);
+  }
+
+/*-------------------------*/
+
+/*Gallery Landing Page Classes*/
+/*--Adapted from W3 schools gallery list page--*/
+
   .gal-pad{
     padding:4px;
   }
   .gal-row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 8px;
   }
   
   .gal-column {
-    flex: 50%;
+    flex: 20%;
     max-width: 34%;
+    padding: 0 8px;
   }
   
   .gal-column img {
@@ -358,32 +576,153 @@ h1 {
     vertical-align: middle;
     width: 100%;
   }
+
+  
 /*-------------------------*/
 
 /*Nav Bar Media Queries*/
-@media (max-width: 599px) {
+@media (max-width: 749px) {
   .main-nav {
     display: none;
   }
   .header{
     flex-direction:row;
   }
+  
+  .header::after{
+    width: 711px;
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .mobile-nav-wrapper {
     display: none;
   }
 }
 /*-------------------------*/
 
+/*SVG Classes*/
+.line-class{
+  position: absolute;
+  width: 79px;
+  height: 1374px;
+  left: 129px;
+  top: -603px;
+  stroke-width: 2px;
+}
+.line-class2{
+  position: absolute;
+  width: 7px;
+  height: 1102px;
+  left: 465px;
+  top: -504px;
+  stroke-width: 24px;
+}
+
+.line-class3{
+  position: absolute;
+  width: 22px;
+  height: 1178px;
+  left: 52px;
+  top: -521px;
+  stroke-width: 9px;
+}
+
+.line-class4{
+  position: absolute;
+    width: 58px;
+    height: 1624px;
+    left: 52px;
+    top: -93px;
+    stroke-width: 2px;
+}
+
+.line-class5{
+  position: absolute;
+  width: 7px;
+  height: 1102px;
+  left: 98%;
+  top: -504px;
+  stroke-width: 24px;
+}
+
+.line-class6{
+  position:absolute;
+  height: 1304px;
+  top: -61px;
+  width: 62px;
+  stroke-width: 3px;
+  left: 62px;
+}
+
+.line-class7{
+  position: absolute;
+  width: 22px;
+  height: 150px;
+  left: 62px;
+  top: 13px;
+  stroke-width: 9px;
+}
+
+
+/*-------------------------*/
 /*Page Content Media Queries*/
 
 /* Phone Media Queries */
 @media screen and (max-width: 479px) {
+  .icon{
+    top: 270px;
+    left: 266px;
+  }
+
+  .contactpage{
+    flex-direction:column;
+    gap:30px;
+    position:absolute;
+    overflow-y: hidden;
+  }
   .listpage li{
     flex-direction:column;
     gap:30px;
+  }
+  .wrap-content{
+    margin-top:-100px;
+  }
+
+  .header::after{
+    width: 500px;
+    margin-top: none;
+  }
+
+  form{
+    width:100%;
+    right:none;
+    padding-right:none;
+  }
+
+  .line-class2{
+    width: 11px;
+    height: 2356px;
+    left: 488px;
+    top: -1078px;
+    stroke-width: 19px;
+  }
+
+  .aboutimg{
+    position: absolute;
+    left: 150px;
+  }
+  .abouttext{
+    position: absolute;
+    top: 623px;
+    left: 170px;
+  }
+  .abouttext p{
+    width:40ch;
+  }
+
+  .line-class{
+    display:none;
   }
 }
 
@@ -393,15 +732,37 @@ h1 {
     flex-direction:column;
     gap:30px;
   }
+  .contactpage{
+    flex-direction:column;
+    gap:30px;
+  }
+  .line-class{
+    display:none;
+  }
+
+  .line-class2{
+    height: 2282px;
+    left: 706px;
+    top: -1052px;
+    stroke-width: 23px;
+  }
+
+  form{
+    width:100%;
+  }
 }
 
 
 /* Desktop Media Queries */
 @media screen and (min-width: 769px) and (max-width: 1080px) {
-  
+  .line-class8{
+    display:none;
+  }
 }
 
 @media screen and (min-width: 1081px){
-  
+  .line-class8{
+    display:none;
+  }
 }
 /*-------------------------*/

@@ -36,39 +36,84 @@
 </head>
 
 <body>
-  <div class="contactform">
-    <h1>Contact</h1>
-    <h2> Looking to get in touch?</h2>
-    <p>Lorem ipsum dolor sit
-      amet, consectetuer adipiscing
-      elit, sed diam nonummy
-      nibh euismod tincidunt ut
-      laoreet dolore magna aliquam
-      erat volutpat. Ut wisi
-      enim ad minim veniam, quis
-      nostrud exerci tation ullamcorper
-      suscipit lobortis nisl
-      ut aliquip ex ea commodo
-      consequat. Duis autem vel
-      eum iriure dolor in hendrerit
-      in vulputate velit esse
-      molestie consequat, vel
-      illum dolore eu feugiat nulla</p>
-    <h2>Subscribe to Our Mailing List</h2>
-    <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required
-    minlength="1" maxlength="100" size="30">
-    <label for="email">Enter your email:</label>
-    <input type="email" id="email" pattern=".+@globex\.com" size="30" required>
-    <label for="phone">Enter your phone number:</label>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"size="30" required>
+  <header class="header">
+    <img class="logo" src="../img/giz2.jpg" alt="This is our company logo">
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../pages/work-landing-page.html">Works</a>
+      <a href="../pages/about.html">About</a>
+      <a class="fake-strike" href="../pages/contact.html">Contact</a>
+    </nav>
+    <div class="mobile-nav-wrapper">
+      <a href="javascript:void(0);" class="icon" data= "hamburger-menu" onclick="myFunction()">
+      <span></span>
+      <span></span>
+      <span></span>
+      </a>
+      <nav id="myLinks" class="mobile-main-nav">
+        <a class="mobile-dot" href="../Portfolio-EKORN/index.html">Home</a>
+        <a class="mobile-dot" href="../pages/work-landing-page.html">Work</a>
+        <a class="mobile-dot" href="../pages/about.html">About</a>
+        <a class= "mobile-fake-strike" href="../pages/contact.html">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
+  <main class="contactpage">
+    <div class="groupcontact">
+      <h1 class="verticaltext">Contact</h1>
+      <svg class="line-class" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="0" y2="900" stroke="black"></line>
+      </svg>
+      <svg class="line-class3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="0" y2="900" stroke="black"></line>
+      </svg>
+      <svg class="line-class4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="0" y2="900" stroke="black"></line>
+      </svg>
+      <div class="contacttext">
+        <h2> Looking <span>to get in touch?</span> </h2>
+        <p>Lorem ipsum dolor sit
+          amet, consectetuer adipiscing
+          elit, sed diam nonummy
+          nibh euismod tincidunt ut
+          laoreet dolore magna aliquam
+          erat volutpat. Ut wisi
+          enim ad minim veniam, quis
+          nostrud exerci tation ullamcorper
+          suscipit lobortis nisl
+          ut aliquip ex ea commodo
+          consequat. Duis autem vel
+          eum iriure dolor in hendrerit
+          in vulputate velit esse
+          molestie consequat, vel
+          illum dolore eu feugiat nulla</p>  
+      </div>
+      <svg class="line-class2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1" y1="0" x2="1" y2="19000" stroke="black"></line>
+      </svg>
+      <svg class="line-class5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1" y1="0" x2="1" y2="19000" stroke="black"></line>
+      </svg>
+    </div>
+    
+    
+    <div class="formwrap">
+      <form action="#">
+        <h2>Subscribe to <span> Our Mailing List</span></h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required
+        minlength="1" maxlength="100" size="30">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" pattern=".+@globex\.com">
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"size="30" required>
+        <div class = "centerbutton">
+          <button class="button button1">Join</button>
+        </div>
+      </form>
+    </div>
+  </main>
 
-  <div class = "centerbutton">
-    <button class="button button1">Join</button>
-  </div>
 
   <script src="../js/main.js"></script>
 </body>
