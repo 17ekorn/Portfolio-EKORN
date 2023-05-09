@@ -84,7 +84,9 @@ p{
 h1 {
   font-size: 74px;
 }
-
+h2{
+  font-size:30px;
+}
 .header {
   margin-top: 2px;
   padding: 16px;
@@ -97,7 +99,7 @@ h1 {
 
 .logo {
   max-width: 172px;
-  z-index: 10;
+  z-index: 20;
   margin-top: -13px;
   margin-left: -19px;
 }
@@ -222,6 +224,7 @@ h1 {
   left: -37px;
   font-family: 'Harmond', normal;
   font-weight: 600;
+  z-index:10;
 }
 
 .mobile-main-nav a{
@@ -305,6 +308,11 @@ h1 {
   padding:30px;
 }
 
+.wrap-list h2, p{
+  position:relative;
+  top: 100px;
+}
+
 .listpage{
   list-style-type: none;
   width:100%;
@@ -356,7 +364,8 @@ h1 {
 }
 
 .working{
-  width:300px;
+  max-width: 512px;
+  max-height: 512px;
 }
 
 .left h2::before{
@@ -508,6 +517,7 @@ textarea:hover{
   }
   .aboutimg{
     width:300px;
+    z-index:-1;
   }
 
   .abouttext{
@@ -537,6 +547,7 @@ textarea:hover{
 
   .abouttext p{
     max-width:65ch;
+    font-size:25px;
   }
   
 
@@ -561,6 +572,7 @@ textarea:hover{
 
   .gal-pad{
     padding:4px;
+    overflow-x:hidden;
   }
   .gal-row {
     display: flex;
@@ -575,8 +587,8 @@ textarea:hover{
   }
   
   .gal-column {
-    flex: 20%;
-    max-width: 34%;
+    flex: 48%;
+    max-width: 50%;
     padding: 0 8px;
   }
   
@@ -694,7 +706,27 @@ textarea:hover{
 }
 /*-------------------------*/
 /*Page Content Media Queries*/
+/*Footer Classes*/
+.aboutfooter{
+  z-index: 20;
+  display: block;
+  position: absolute;
+  width: 112px;
+  top: 1655px;
+  height: 64px;
+  left: 38px;
+  font-size: 20px;
+  color: black;
+}
 
+.contactfooter{
+
+}
+
+.webdesignfooter{
+
+}
+/*-------------------------*/
 /* Phone Media Queries */
 @media screen and (max-width: 479px) {
   .icon{
@@ -739,36 +771,77 @@ textarea:hover{
 
   .aboutimg{
     position: absolute;
+    width: 364px;
     left: 150px;
+    left: 150px;
+    z-index: -1;
+    top: 57px;
   }
+
   .abouttext{
     position: absolute;
-    top: 623px;
+    top: 700px;
     left: 170px;
   }
   .abouttext p{
-    width:40ch;
+    width:30ch;
   }
 
+  .aboutverticaltext{
+    top: 48px;
+  }
+  .line-class7{
+    width: 285px;
+    height: 1095px;
+    left: 151px;
+    top: 269px;
+    stroke-width:1px;
+  }
   .line-class{
     display:none;
   }
   .gal-pad{
     position:absolute;
+    top: 333px;
+    overflow-x: hidden;
+  }
+
+  .gal-pad h1{
+    position:absolute;
+    left: 20px;
+    top: -200px;
+    font-size: 59px;
   }
 
   .gal-column{
     flex:100%;
     max-width:100%;
   }
+
+  .gal-column img{
+    width: 526px;
+  }
+
   .line-class9{
-    display:hidden;
+    display:none;
   }
 
   .formwrap{
     right:0px;
     padding-right:0px;
     left: 10%;
+  }
+
+  .line-class6{
+    height: 1703px;
+    top: -266px;
+    width: 164px;
+    stroke-width: 2px;
+    left: 62px;
+  }
+
+  .contacttext{
+    font-size: 25px;
   }
 }
 
@@ -802,22 +875,92 @@ textarea:hover{
 
   .gal-column{
     flex:50%;
-    max-width:50%;
+    width:710px;
   }
   .line-class9{
-    display:hidden;
+    display:none;
   }
   .formwrap{
-    right:0px;
-    padding-right:0px;
-    left: 10%;
+    top: 810px;
+    right: 0px;
+    padding-right: 0px;
+    left: 151px;
+    position: absolute;
+  }
+  .wrap-content{
+    flex-direction: column;
+    margin-top:-100px;
+    position:absolute;
+  }
+  .abouttext{
+    position: relative;
+    left: 234px;
+    width: 40ch;
+  }
+  .aboutimg{
+    position:relative;
+    width: 573px;
+    top: 33px;
+    left: -18px;
+  }
+
+  .contacttext{
+    position: absolute;
+    left: 226px;
+    width: 300px;
+  }
+  
+  .contacttext p{
+    width: 37ch;
+    font-size: 25px;
+  }
+
+  .line-class6{
+    height: 2296px;
+    top: -562px;
+    width: 135px;
+    stroke-width: 2px;
+    left: 62px;
+  }
+
+  .line-class7{
+    width: 285px;
+    height: 1097px;
+    left: 235px;
+    top: 627px;
+    stroke-width: 1px;
+  }
+
+  .gal-column{
+    flex: 40%;
+    width: 710px;
   }
 }
 
 
 /* Desktop Media Queries */
 @media screen and (min-width: 769px) and (max-width: 1080px) {
-  
+  .aboutimg{
+    width: auto;
+    z-index: -1;
+    height: 901px;
+    top: 28px;
+    position: relative;
+    left: 59px;
+  }
+  .line-class9{
+    display:none;
+  }
+  .abouttext{
+    position: absolute;
+    top: 1005px;
+    left: 224px;
+    max-width: 42ch;
+  }
+  .abouttext p{
+    width:42ch;
+  }
+
 }
 
 @media screen and (min-width: 1081px){
