@@ -267,8 +267,26 @@ h2{
 .welcomeimg{
   height:600px;
   width:auto;
+  top: -22px;
 }
 
+.welcomeparagraph{
+  display:flex;
+  position:absolute;
+  top: 188px;
+  left: 435px;
+  flex-direction: column;
+}
+
+.welcomeparagraph p{
+  position: relative;
+  top: -23px;
+  font-size:33px;
+  max-width:65ch;
+}
+.welcomeparagraph span{
+  display:block;
+}
 /*-------------------------*/
 
 /*Works Landing Page Classes*/
@@ -490,13 +508,13 @@ textarea:hover{
   .wrap-content{
     display:flex;
     width:97%;
-    gap: 170px;
+    gap: 60px;
     padding: 20px;
     margin-top: -75px;
   }
   .aboutimg{
-    width:300px;
     z-index:-1;
+    width:auto;
   }
 
   .abouttext{
@@ -570,6 +588,10 @@ textarea:hover{
     max-width: 50%;
     padding: 0 8px;
   }
+
+  .gal-column a{
+    text-decoration: none;
+  }
   
   .gal-column img {
     margin-top: 8px;
@@ -592,6 +614,22 @@ textarea:hover{
   .header::after{
     width: 709px;
     left: 49px;
+  }
+  .worklist{
+    flex-direction:column;
+    margin-left:30px;
+  }
+  .workimg img{
+    height:600px;
+    width: auto;
+  }
+
+  .workimg{
+    text-align: center;
+    max-width: 100%;
+  }
+  .worktext{
+    margin-left: 30px;
   }
 }
 
@@ -675,14 +713,7 @@ textarea:hover{
 
 }
 
-.line-class9{
-  position: absolute;
-  height: 1355px;
-  top: 360px;
-  width: 838px;
-  stroke-width: 0.1px;
-  left: 111px;
-}
+
 /*-------------------------*/
 /*Page Content Media Queries*/
 /*Footer Classes*/
@@ -706,6 +737,45 @@ textarea:hover{
 
 }
 /*-------------------------*/
+
+/*Individual page*/
+
+  .workimg{
+    width:100%;
+  }
+  
+  .workimg img{
+    height:600px;
+    width:auto;
+  }
+  .worktext{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    gap:30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .worktext p{
+    font-size:25px;
+    width:800px;
+  }
+
+  .worktext span{
+    display:block;
+  }
+  
+  .worklist{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    gap: 30px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
 /* Phone Media Queries */
 @media screen and (max-width: 479px) {
   .icon{
@@ -796,14 +866,11 @@ textarea:hover{
     flex:100%;
     max-width:100%;
   }
-
+  
   .gal-column img{
     width: 526px;
   }
 
-  .line-class9{
-    display:none;
-  }
 
   .formwrap{
     right:0px;
@@ -828,6 +895,28 @@ textarea:hover{
   }
   .mobile-main-nav a{
     padding-left: 149px;
+  }
+
+  .worklist{
+    position: absolute;
+    left: 10%;
+  }
+
+  .worktext h1{
+    font-size:37px;
+  }
+
+  .worktext p{
+    width:300px;
+  }
+
+  .workimg img{
+    width:332px;
+    height:auto;
+  }
+  iframe{
+    width: 400px;
+    height:400px;
   }
 }
 
@@ -863,9 +952,7 @@ textarea:hover{
     flex:50%;
     width:710px;
   }
-  .line-class9{
-    display:none;
-  }
+
   .formwrap{
     top: 810px;
     right: 0px;
@@ -921,6 +1008,12 @@ textarea:hover{
     flex: 40%;
     width: 710px;
   }
+  .worklist{
+    position:absolute;
+  }
+  .worktext p{
+    width: 600px;
+  }
 }
 
 
@@ -934,9 +1027,7 @@ textarea:hover{
     position: relative;
     left: 59px;
   }
-  .line-class9{
-    display:none;
-  }
+
   .abouttext{
     position: absolute;
     top: 1005px;
@@ -947,9 +1038,26 @@ textarea:hover{
     width:42ch;
   }
 
+  iframe{
+    width: 800px;
+    height:800px;
+  }
+
 }
 
 @media screen and (min-width: 1081px){
- 
+ .workimg img{
+  width:700px;
+  height: auto;
+ }
+
+ .wrap-content{
+  height:900px;
+ }
+
+ iframe{
+  width: 1000px;
+  height:1000px;
+  }
 }
 /*-------------------------*/
