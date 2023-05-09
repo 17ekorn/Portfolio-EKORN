@@ -211,86 +211,62 @@ h2{
 
 .mobile-main-nav {
   display: none;
+  /* text-align: center; */
   flex-direction: column;
   background-color: var(--white);
   padding-bottom: 65px;
-  align-items: center;
-  align-content: center;
+  padding-top: 50px;
   margin-left: 37px;
   margin-right: 20px;
   position: absolute;
-  top: 51px;
-  width: 100%;
+  top: 54px;
+  width: 749px;
   left: -37px;
   font-family: 'Harmond', normal;
   font-weight: 600;
-  z-index:10;
+  z-index: 10;
 }
 
 .mobile-main-nav a{
   padding: 8px;
-  padding-left: 96px;
+  padding-left: 232px;
   text-decoration: none;
   font-family: 'Harmond', normal;
   font-weight: 600;
+  color: var(--black);
+  overflow-x:hidden;
+  overflow-y:hidden;
 }
 
-.mobiledot{
-  display:flex;
-}
-
-.mobiledot::before{
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 9999px;
-  border: 1px solid black;
-  right: 1px;
-  top: 3px;
-  position: relative;
-}
-
-.mobile-fake-strike{
-  font-family: 'Harmond', normal;
-  font-style: italic;
-  font-weight: normal;
-  position:relative;
-}
-
-.mobile-fake-strike::before{
-  content: " ";
-  width: 10px;
-  height: 10px;
-  border-radius: 9999px;
-  border: 1px solid black;
-  position: absolute;
-  background-color: black;
-}
-
-.mobile-fake-strike::after {
-  content: " ";
-  position: absolute;
-  background-color: black;
-  top: 38%;
-  width: 87%;
-  height: 1.2px;
-  left: 10px;
-}
 
 .mobile-main-nav a::before{
   content: "";
   margin-bottom: -16.4px;
   display: block;
-  padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  padding-top: 24px;
+  width: 300px;
+  color: black;
+  height: 1px;
+  border-top: 1px solid black;
 }
 
 .mobile-main-nav a::after{
   content: "";
-  margin-bottom: -16.3px;
+  margin-bottom: -16.299999999999997px;
   display: block;
-  padding-bottom: 20px;
+  width: 300px;
+  padding-bottom: 5px;
   border-bottom: 1px solid black;
+  position: absolute;
+  top: 244px;
+}
+
+/*-------------------------*/
+
+/*Home Page Classes*/
+.welcomeimg{
+  height:600px;
+  width:auto;
 }
 
 /*-------------------------*/
@@ -364,8 +340,11 @@ h2{
 }
 
 .working{
-  max-width: 512px;
-  max-height: 512px;
+  margin-top: -15px;
+  margin-left: -12px;
+  width: 188px;
+  position: relative;
+  z-index:20;
 }
 
 .left h2::before{
@@ -842,6 +821,13 @@ textarea:hover{
 
   .contacttext{
     font-size: 25px;
+  }
+
+  .mobile-main-nav{
+    width:565px;
+  }
+  .mobile-main-nav a{
+    padding-left: 149px;
   }
 }
 
