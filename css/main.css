@@ -55,6 +55,7 @@ body {
   --grey:#ddd;
   --white: #ffffff;
   --black: #000000;
+  --red: red;
 }
 img {
   width: 100%;
@@ -132,6 +133,15 @@ h2{
   font-weight: 600;
   font-style: italic;
   font-size:20px;
+}
+
+.main-nav a:hover{
+  color:red;
+  transition: all .25s ease;
+}
+
+.main-nav a:focus{
+
 }
 
 .fake-strike{
@@ -274,7 +284,7 @@ h2{
   display:flex;
   position:absolute;
   top: 188px;
-  left: 435px;
+  left: 411px;
   flex-direction: column;
 }
 
@@ -286,6 +296,14 @@ h2{
 }
 .welcomeparagraph span{
   display:block;
+  position: relative;
+  left: 42px;
+}
+
+.welcomeparagraph h1{
+  font-size: 51px;
+  position: relative;
+  right: 40px;
 }
 /*-------------------------*/
 
@@ -294,6 +312,15 @@ h2{
   writing-mode: vertical-lr;
   text-orientation: upright;
   text-transform: uppercase;
+}
+
+.working1{
+  margin-top: 58px;
+  margin-left: -12px;
+  width: 346px;
+  position: relative;
+  z-index: 5;
+  top:88px;
 }
 
 /*List Classes*/
@@ -398,6 +425,7 @@ h2{
 .groupcontact{
   display:flex;
   gap: 60px;
+  height: 700px;
 }
 
 .groupcontact::after{
@@ -426,6 +454,8 @@ form{
   display:inline-block;
   text-align: center;
   justify-content: center;
+  font-family: 'Harmond', normal;
+  font-weight: 600;
 }
 
 .formwrap{
@@ -443,12 +473,13 @@ label{
   font-size: 20px;
   margin-bottom: 3%;
   display:block;
-  font-family:'Cormorant Garamond', serif;
+  font-family: 'Harmond', normal;
+  font-weight: 600;
   color:var(--black);
 }
 
 input {
-  background-color: var(--offwhite);
+  background-color: var(--white);
   color: var(--black);
   border-radius: 1.5rem;
   width: 17ch;
@@ -458,6 +489,49 @@ input {
   padding-right: 20px;
   text-align: center;
   margin-bottom: 6%;
+}
+
+.button {
+  border:1px var(--black);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: all .25s ease;
+  border-radius:30px;
+}
+
+.button1{
+  background-color: var(--red);
+  color: var(--black);
+}
+
+.button1:hover {
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+            -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.button1:focus{
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+            -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+a:focus{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
 input:focus{
@@ -717,6 +791,35 @@ textarea:hover{
 /*-------------------------*/
 /*Page Content Media Queries*/
 /*Footer Classes*/
+
+.footer-wrapper{
+  text-align: center;
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  font-size: 20px;
+  justify-content: flex-start;
+}
+
+footer {
+  background: var(--white);
+  min-height: 5%;
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  align-content: center;
+  bottom: -262px;
+  color: var(--black);
+  font-weight: bold;
+  font-family: 'Harmond', normal;
+  font-weight: 600;
+}
+
+footer p{
+  position:relative;
+  top:0px;
+}
+
 .aboutfooter{
   z-index: 20;
   display: block;
@@ -803,6 +906,9 @@ textarea:hover{
     width: 500px;
     margin-top: none;
   }
+  .groupcontact{
+    height: 985px;
+  }
 
   form{
     width:100%;
@@ -876,6 +982,7 @@ textarea:hover{
     right:0px;
     padding-right:0px;
     left: 10%;
+    top: -161px;
   }
 
   .line-class6{
@@ -918,6 +1025,47 @@ textarea:hover{
     width: 400px;
     height:400px;
   }
+  .welcomeparagraph h1{
+    position: absolute;
+    top: 12px;
+    left: 257px;
+    font-size: 33px;
+  }
+
+  .welcomeparagraph span{
+    position: absolute;
+    top: 40px;
+    left: 34px;
+  }
+
+  .welcomeparagraph p{
+    top: 402px;
+    font-size: 25px;
+    width: 39ch;
+    left: 36px;
+  }
+
+  .welcomeparagraph{
+    left:0;
+  }
+  
+  .welcomeimg{
+    height: 431px;
+    position: relative;
+    top: 30px;
+  }
+  .listpage{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  
+  .wrap-list{
+    position: absolute;
+    left: 13%;
+    margin-top: -203px;
+    height:2000px;
+  }
 }
 
 /* Tablet Media Queries */
@@ -929,6 +1077,7 @@ textarea:hover{
   .contactpage{
     flex-direction:column;
     gap:30px;
+    height: 1408px;
   }
   .line-class{
     display:none;
@@ -954,10 +1103,10 @@ textarea:hover{
   }
 
   .formwrap{
-    top: 810px;
+    top: 937px;
     right: 0px;
     padding-right: 0px;
-    left: 151px;
+    left: 51px;
     position: absolute;
   }
   .wrap-content{
@@ -1014,6 +1163,35 @@ textarea:hover{
   .worktext p{
     width: 600px;
   }
+  .welcomeparagraph h1{
+    font-size: 43px;
+    position: absolute;
+    left: 383px;
+    top: 10px;
+  }
+  .welcomeparagraph span{
+    position: absolute;
+    left: 28px;
+  }
+
+  .welcomeparagraph p{
+    position: relative;
+    top: 537px;
+    left: 54px;
+    text-align: center;
+    font-size: 33px;
+    max-width: 45ch;
+  }
+  .wrap-list{
+    position: relative;
+    left: 20%;
+    margin-top: -203px;
+    height:2000px;
+  }
+  .welcomeparagraph{
+    left:0px;
+  }
+
 }
 
 
@@ -1059,5 +1237,7 @@ textarea:hover{
   width: 1000px;
   height:1000px;
   }
+
+
 }
 /*-------------------------*/
